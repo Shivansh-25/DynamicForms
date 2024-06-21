@@ -5,22 +5,22 @@ const AdditionalQuestions = () => {
   const location = useLocation();
   const questions = JSON.parse(location.state.additionalQuestions);
   return (
-    <div className="flex flex-col items-center justify-space-between w-screen h-screen bg-gray-100">
-      <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-100">
-        <h2 className="text-3xl font-bold m-3 p-5">Additional Questions</h2>
+    <div className="flex flex-col items-center h-screen bg-gray-100 mt-12 mb-12 ">
+      <div className="flex flex-col justify-left lg:w-1/2 w-full h-screen bg-gray-100 p-10">
+        <div className="flex justify-center">
+          <h2 className="text-3xl font-bold mb-3 p-2">Additional Questions</h2>
+        </div>
         {questions.map(
           (q, index) =>
             index !== questions.length - 1 && (
-              <div key={index} className="flex  m-2 p-2 flex-col items-center">
+              <div key={index} className="flex mb-2 p-2 ">
                 <p>{q.question}</p>
               </div>
             ),
         )}
       </div>
-      <div className="flex p-10 flex-col items-center justify-center w-[45vw] h-screen bg-gray-100">
-        <h3 className="text-2xl font-bold m-3 p-5">
-          Here is the summary of the questions.... please don't be offended
-        </h3>
+      <div className="flex p-10 flex-col items-center justify-center lg:w-1/2 w-full h-screen bg-gray-100">
+        <h3 className="text-2xl font-bold m-3 p-5">Sarcastic Summary</h3>
         <p>{questions[questions.length - 1].question}</p>
       </div>
     </div>

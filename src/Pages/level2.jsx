@@ -53,9 +53,8 @@ const Level2 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-100 mt-12 mb-12">
       <form onSubmit={submitForm} className="flex flex-col items-center">
-        <div className="flex flex-row items-center">
           <div className="flex flex-col items-center">
             <label>Full Name</label>
             <input
@@ -98,9 +97,7 @@ const Level2 = () => {
               <div className="text-red-600">{errors.phoneNumber}</div>
             )}
           </div>
-        </div>
 
-        <div className="flex flex-row items-center">
           <div className="flex flex-col items-center">
             <label>Applying for Position</label>
             <select
@@ -168,9 +165,7 @@ const Level2 = () => {
               )}
             </div>
           )}
-        </div>
 
-        <div className="flex flex-row items-center">
           <div className="flex flex-col items-center">
             <label>Additional Skills</label>
             <div className="flex flex-row">
@@ -223,7 +218,6 @@ const Level2 = () => {
             {errors.interviewTime && (
               <div className="text-red-600">{errors.interviewTime}</div>
             )}
-          </div>
         </div>
 
         <button
