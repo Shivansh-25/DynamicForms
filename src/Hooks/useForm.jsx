@@ -20,7 +20,6 @@ const useForm = (initialValues, validate) => {
     e.preventDefault();
     const validationErrors = validate(values);
     setErrors(validationErrors);
-    console.log(Object.keys(validationErrors));
     if (Object.keys(validationErrors).length === 0) {
       callback();
     }

@@ -117,7 +117,6 @@ const Level3 = () => {
       values.fullName,
       values.email,
     );
-    console.log(additionalQuestions);
     navigate("/additional-questions", { state: { additionalQuestions } });
   };
 
